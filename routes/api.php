@@ -25,5 +25,5 @@ Route::get('foo', function () {
     return "Hello World!";
 });
 
-Route::get('/1/locations', 'ShopController@getRoutes');
+Route::get('/1/locations', 'ShopController@locations');
 // Route::apiResource('api/areas', 'AreaController@index');
