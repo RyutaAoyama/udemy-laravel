@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class ShopController extends Controller
 {
-    public function locations(){
+    public function locations(Request $request){
         // header('Content-Type: application/json');
         //主 -> 従
         // $area_tokyo = DB::table('areas')->find($request->id);
@@ -23,7 +23,7 @@ class ShopController extends Controller
         // $route_shop = Shop::find(3)->routes()->get();
         // dd($route_shop);
        $returnJson = new Shop;
-       return $returnJson->returnJson();
+       return $returnJson->shops($request->category);
 
     }
     // public function getRoutes(Request $request){

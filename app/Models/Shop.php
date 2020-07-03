@@ -15,7 +15,7 @@ class Shop extends Model
     }
 
     public function shops($id){
-        $shop_route = Shop::find($id)->routes()->get();
+        $shop_route = Route::find($id)->shops()->get();
         return $shop_route;
     }
 
