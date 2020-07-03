@@ -21,4 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/areas', function () {
     return new AreaResource(Area::all());
 });
+Route::get('foo', function () {  
+    return "Hello World!";
+});
+
+Route::get('/1/locations', 'ShopController@getRoutes');
 // Route::apiResource('api/areas', 'AreaController@index');

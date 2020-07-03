@@ -13,4 +13,9 @@ class Shop extends Model
     public function routes(){
         return $this->belongsToMany('App\Models\Route');
     }
+
+    public function shops($id){
+        $shop_route = Shop::find($id)->routes()->get();
+        return $shop_route;
+    }
 }
