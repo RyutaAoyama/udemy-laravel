@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
+// Route::get('api/areas','AreaController@index');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/areas', function () {
+    return new AreaResource(Area::all());
+});
+Route::get('foo', function () {  
+    return "Hello World!";
+});
+
+Route::get('/1/locations', 'ShopController@locations');
+// Route::apiResource('api/areas', 'AreaController@index');
